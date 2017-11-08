@@ -15,7 +15,7 @@ protocol mapViewDelegate  {
     
 }
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
-    
+
     var delegate : mapViewDelegate?
     var shopNameSelected : Shops!
     var nameOfTheShop :String!
@@ -24,10 +24,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var selectedAnnotation :MKPointAnnotation!
     @IBOutlet weak var mapView: MKMapView!
     
+    var isFirstUse : Bool = true
+    
     @IBAction func backButtonPressed(_ sender: Any) {
         
         dismiss(animated: true, completion: nil)
     }
+    //func neARMe(nM : Shops){}
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +55,29 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    func locationManager(_manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == .authorizedWhenInUse {
-            locationManager.requestLocation()
-        }
-    }
     
+//    func locationManager(_manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+//        if status == .authorizedWhenInUse {
+//            locationManager.requestLocation()
+//        }
+//    }
+    
+    
+    
+//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+//
+//        if let location = locations.last  {
+//           // let span = MKCoordinateSpanMake(0.5, 0.5)
+//            let region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
+//            self.mapView.setRegion(region, animated: true)
+//
+//                self.mapView.showsUserLocation = true
+//
+//
+//
+//        }
+//    }
+//
     func nearMeSearch()  {
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = nameOfTheShop
@@ -78,8 +98,10 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                     annotation.subtitle = "  \(city) , \(state) \(postalcode) "
                     
                     self.mapView.addAnnotation(annotation)
-                    let span = MKCoordinateSpanMake(0.05, 0.05)
+                    let span = MKCoordinateSpanMake(0.5, 0.5)
                     let region = MKCoordinateRegionMake(mapItem.placemark.coordinate, span)
+                    self.mapView.setRegion(region, animated: true)
+                    
                     
                     //.distance(from: nearMLocation)
                     //                let distanceInMiles = distanceInMeters / 1609.344
@@ -91,7 +113,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    // Alert if map access denied
+    // Alert
     func showAlert(message: String) {
         let alert = UIAlertController (title: "Shopping List", message: message, preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Ok", style: .default)
@@ -99,6 +121,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         alert.addAction(alertAction)
         present(alert, animated: true)
     }
+    
+   // Alert if map access denied
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -138,16 +162,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         return annotationView
     }
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-        if let location = locations.first {
-            let span = MKCoordinateSpanMake(0.2, 0.2)
-            let region = MKCoordinateRegion(center: location.coordinate, span: span)
-            self.mapView.setRegion(region, animated: true)
-            self.mapView.showsUserLocation = true
-            
-        }
-    }
+    
     //user location
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
@@ -160,20 +175,49 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     @objc func infoButtonPressed() {
         
-        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
-            UIApplication.shared.open(URL(string:
-                "comgooglemaps://?daddr=\(Float(self.selectedAnnotation.coordinate.latitude)),\(Float(self.selectedAnnotation.coordinate.longitude))&directionsmode=driving")!,options: [:], completionHandler: nil)
-            
-        } else {
-            let url: String = "http://maps.apple.com/?daddr=\(mapView.userLocation.coordinate.latitude),\(mapView.userLocation.coordinate.longitude)&daddr=\( self.selectedAnnotation.coordinate.latitude),\(self.selectedAnnotation.coordinate.longitude)"
-            UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
-        }
-    }
+         let alert = UIAlertController (title: "Select the map from", message: "Select the map", preferredStyle: .alert)
+
+         let googleMap = UIAlertAction (title: "Google Map",
+         style: .default) {
+         [unowned self] action in
+         UIApplication.shared.open(URL(string:
+         "comgooglemaps://?daddr=\(Float(self.selectedAnnotation.coordinate.latitude)),\(Float(self.selectedAnnotation.coordinate.longitude))&directionsmode=driving")!,options: [:], completionHandler: nil)
+
+         }
+        let appleMap = UIAlertAction (title: "Apple Map",
+                        style: .default) {
+                            [unowned self] action in
+
+                            let url: String = "http://maps.apple.com/?daddr=\(self.mapView.userLocation.coordinate.latitude),\(self.mapView.userLocation.coordinate.longitude)&daddr=\( self.selectedAnnotation.coordinate.latitude),\(self.selectedAnnotation.coordinate.longitude)"
+                                UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
+
+                }
+        let cancelAction = UIAlertAction (title: "Cancel",
+                                          style: .default)
+        alert.addAction(googleMap)
+        alert.addAction(appleMap)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+
+         }
+    
+    
+//        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+//            UIApplication.shared.open(URL(string:
+//                "comgooglemaps://?daddr=\(Float(self.selectedAnnotation.coordinate.latitude)),\(Float(self.selectedAnnotation.coordinate.longitude))&directionsmode=driving")!,options: [:], completionHandler: nil)
+//
+//        } else {
+//            let url: String = "http://maps.apple.com/?daddr=\(mapView.userLocation.coordinate.latitude),\(mapView.userLocation.coordinate.longitude)&daddr=\( self.selectedAnnotation.coordinate.latitude),\(self.selectedAnnotation.coordinate.longitude)"
+//            UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
+//        }
+//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        segue.identifier == "neARMeSegue"
+        //segue.identifier == "neARMeSegue"
         let navigationC = segue.destination as! UINavigationController
-        let neARMeVC = navigationC.viewControllers.first as! MapViewController
-        neARMeVC.nameOfTheShop = shopNameSelected.shopName
+        let neARMeVC = navigationC.viewControllers.first as! NearMeMapViewController
+        neARMeVC.nameOfTheShop = nameOfTheShop
+       
     }
+    
 }
 

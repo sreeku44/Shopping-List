@@ -15,8 +15,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//        // Override point for customization after application launch.
+//        return true
+//    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // add the image to the front of the view
+        let splashImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 320, height: 480))
+        splashImage.image = UIImage(named: "Shoppinglist.png")
+        self.window?.addSubview(splashImage)
+        self.window?.bringSubview(toFront: splashImage)
+        
+        //set an anchor point on the image view so it opens from the left
+        splashImage.layer.anchorPoint = CGPoint(x: 0, y: 0.5)
+        
+        //reset the image view frame
+        splashImage.frame = CGRect(x: 0, y: 0, width: 320, height: 480)
+        
+        // animate the open
+        UIView.animate(withDuration: 1.0, delay: 0.6, options: .curveEaseOut , animations: {() -> Void in
+            splashImage.layer.transform = CATransform3DRotate(CATransform3DIdentity, CGFloat(-Double.pi / 2), 0, 1, 0)
+        }, completion: {(_ finished: Bool) -> Void in
+            //remove that imageview from the view
+            splashImage.removeFromSuperview()
+        })
+        
+        
+        
+        UINavigationBar.appearance().barTintColor = UIColor(fromHexString: "b52e31")
+        
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
+        
+        UINavigationBar.appearance().tintColor = UIColor.white
+        
         return true
     }
 

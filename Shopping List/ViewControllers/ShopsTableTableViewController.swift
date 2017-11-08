@@ -26,14 +26,14 @@ class ShopsTableTableViewController: UITableViewController {
         
         let saveAction = UIAlertAction (title: "Save",
                                         style: .default) {
-                                            [unowned self] action in
-                                            guard let textField = alert.textFields?.first,
-                                                let shopNameToSave = textField.text else {
-                                                    return
+                                [unowned self] action in
+                                guard let textField = alert.textFields?.first,
+                                let shopNameToSave = textField.text else {
+                                return
                                             }
-                                            self.save(shopName: shopNameToSave)
+                                self.save(shopName: shopNameToSave)
                                             
-                                            self.tableView.reloadData()
+                        self.tableView.reloadData()
         }
         
         let cancelAction = UIAlertAction (title: "Cancel",
@@ -145,7 +145,7 @@ override func viewWillAppear(_ animated: Bool) {
         return cell
     }
     
-    //Delete Table
+   // Delete Table
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
@@ -160,9 +160,9 @@ override func viewWillAppear(_ animated: Bool) {
         self.tableView.reloadData()
     }
     
+    
     //segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //  segue.identifier == "ShopToItem"
         let navigationVC = segue.destination as! UINavigationController
         let itemTVC = navigationVC.viewControllers.first as!ItemTableViewController
         guard

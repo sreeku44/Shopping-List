@@ -10,7 +10,8 @@ import Foundation
 import MapKit
 
 class NearMeRequest {
-    var coordinate :CLLocationCoordinate2D!
+    
+    var coordinate : CLLocationCoordinate2D!
     var name :String!
     var street :String!
     var city :String!
@@ -18,4 +19,16 @@ class NearMeRequest {
     var zip :String!
     var address :[String]!
     
+//    init(coordinate : CLLocationCoordinate2D, name : String, street :String, city : String, state : String, zip : String, address :[String]  ) {
+//        self.coordinate = coordinate
+//        self.name = name
+//        self.city = city
+//        self.state = state
+//        self.zip = zip
+//        self.address = address
+//    }
+    
+
 }
+
+

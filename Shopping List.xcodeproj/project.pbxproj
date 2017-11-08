@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22AC152734DD7BC84F03E807 /* Pods_Shopping_List.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8885B1B5D2B974E5DE41631C /* Pods_Shopping_List.framework */; };
 		DD29F9CD1FAB9C1700AD82E4 /* NearMeMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD29F9CC1FAB9C1700AD82E4 /* NearMeMapViewController.swift */; };
 		DD29F9D11FAC30B400AD82E4 /* NearMeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD29F9D01FAC30B400AD82E4 /* NearMeRequest.swift */; };
+		DD29F9D51FB0C7F700AD82E4 /* NearMeIndexAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD29F9D41FB0C7F700AD82E4 /* NearMeIndexAnnotation.swift */; };
+		DD29F9D71FB0C83900AD82E4 /* NearMeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD29F9D61FB0C83900AD82E4 /* NearMeAnnotationView.swift */; };
+		DD29F9DB1FB0E3A000AD82E4 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD29F9DA1FB0E39F00AD82E4 /* UIColor+Additions.m */; };
 		DDD467D21FA2DB1D0053C4F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD467D11FA2DB1D0053C4F0 /* AppDelegate.swift */; };
 		DDD467D41FA2DB1D0053C4F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD467D31FA2DB1D0053C4F0 /* ViewController.swift */; };
 		DDD467D71FA2DB1D0053C4F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD467D51FA2DB1D0053C4F0 /* Main.storyboard */; };
@@ -19,11 +23,20 @@
 		DDD467E91FA779420053C4F0 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD467E81FA779420053C4F0 /* ItemTableViewController.swift */; };
 		DDD468191FAA11A80053C4F0 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD468181FAA11A80053C4F0 /* AddItemViewController.swift */; };
 		DDD4681B1FAA43770053C4F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4681A1FAA43770053C4F0 /* MapViewController.swift */; };
+		DDF8E8E31FB2BCCE0053850D /* Shoppinglist.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF8E8E21FB2BCCE0053850D /* Shoppinglist.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C0633F996BBC40639150C53 /* Pods-Shopping List.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopping List.release.xcconfig"; path = "Pods/Target Support Files/Pods-Shopping List/Pods-Shopping List.release.xcconfig"; sourceTree = "<group>"; };
+		83CF5371ADD18361A0A7B5BF /* Pods-Shopping List.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Shopping List.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Shopping List/Pods-Shopping List.debug.xcconfig"; sourceTree = "<group>"; };
+		8885B1B5D2B974E5DE41631C /* Pods_Shopping_List.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Shopping_List.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD29F9CC1FAB9C1700AD82E4 /* NearMeMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeMapViewController.swift; sourceTree = "<group>"; };
 		DD29F9D01FAC30B400AD82E4 /* NearMeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeRequest.swift; sourceTree = "<group>"; };
+		DD29F9D41FB0C7F700AD82E4 /* NearMeIndexAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeIndexAnnotation.swift; sourceTree = "<group>"; };
+		DD29F9D61FB0C83900AD82E4 /* NearMeAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMeAnnotationView.swift; sourceTree = "<group>"; };
+		DD29F9D81FB0E39300AD82E4 /* UIColor+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
+		DD29F9D91FB0E39E00AD82E4 /* Shopping List-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shopping List-Bridging-Header.h"; sourceTree = "<group>"; };
+		DD29F9DA1FB0E39F00AD82E4 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
 		DDD467CE1FA2DB1D0053C4F0 /* Shopping List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopping List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD467D11FA2DB1D0053C4F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDD467D31FA2DB1D0053C4F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +49,7 @@
 		DDD467E81FA779420053C4F0 /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 		DDD468181FAA11A80053C4F0 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		DDD4681A1FAA43770053C4F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		DDF8E8E21FB2BCCE0053850D /* Shoppinglist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shoppinglist.png; path = ../../../../Downloads/Shoppinglist.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22AC152734DD7BC84F03E807 /* Pods_Shopping_List.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B27493A312C5E9CF445F0CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83CF5371ADD18361A0A7B5BF /* Pods-Shopping List.debug.xcconfig */,
+				3C0633F996BBC40639150C53 /* Pods-Shopping List.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		407841EBE677FB771ABFD600 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8885B1B5D2B974E5DE41631C /* Pods_Shopping_List.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DDD467C51FA2DB1D0053C4F0 = {
 			isa = PBXGroup;
 			children = (
 				DDD467D01FA2DB1D0053C4F0 /* Shopping List */,
 				DDD467CF1FA2DB1D0053C4F0 /* Products */,
+				3B27493A312C5E9CF445F0CF /* Pods */,
+				407841EBE677FB771ABFD600 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,7 +105,6 @@
 				DDD467D51FA2DB1D0053C4F0 /* Main.storyboard */,
 				DDD468171FA901B20053C4F0 /* ViewControllers */,
 				DDD467D11FA2DB1D0053C4F0 /* AppDelegate.swift */,
-				DDD467D31FA2DB1D0053C4F0 /* ViewController.swift */,
 				DDD467DB1FA2DB1D0053C4F0 /* Assets.xcassets */,
 				DDD467DD1FA2DB1D0053C4F0 /* LaunchScreen.storyboard */,
 				DDD467E01FA2DB1D0053C4F0 /* Info.plist */,
@@ -83,12 +116,19 @@
 		DDD468171FA901B20053C4F0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DDF8E8E21FB2BCCE0053850D /* Shoppinglist.png */,
+				DDD467D31FA2DB1D0053C4F0 /* ViewController.swift */,
 				DDD467E81FA779420053C4F0 /* ItemTableViewController.swift */,
 				DDD467E61FA2DD7C0053C4F0 /* ShopsTableTableViewController.swift */,
 				DDD468181FAA11A80053C4F0 /* AddItemViewController.swift */,
 				DDD4681A1FAA43770053C4F0 /* MapViewController.swift */,
+				DD29F9D61FB0C83900AD82E4 /* NearMeAnnotationView.swift */,
+				DD29F9D41FB0C7F700AD82E4 /* NearMeIndexAnnotation.swift */,
 				DD29F9CC1FAB9C1700AD82E4 /* NearMeMapViewController.swift */,
 				DD29F9D01FAC30B400AD82E4 /* NearMeRequest.swift */,
+				DD29F9D81FB0E39300AD82E4 /* UIColor+Additions.h */,
+				DD29F9DA1FB0E39F00AD82E4 /* UIColor+Additions.m */,
+				DD29F9D91FB0E39E00AD82E4 /* Shopping List-Bridging-Header.h */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -100,9 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDD467E31FA2DB1D0053C4F0 /* Build configuration list for PBXNativeTarget "Shopping List" */;
 			buildPhases = (
+				10A132CEE1E56DFC808A4EBF /* [CP] Check Pods Manifest.lock */,
 				DDD467CA1FA2DB1D0053C4F0 /* Sources */,
 				DDD467CB1FA2DB1D0053C4F0 /* Frameworks */,
 				DDD467CC1FA2DB1D0053C4F0 /* Resources */,
+				C608F5EFE28D47E57D169500 /* [CP] Embed Pods Frameworks */,
+				6A73E235AEED615365E91A32 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +168,7 @@
 				TargetAttributes = {
 					DDD467CD1FA2DB1D0053C4F0 = {
 						CreatedOnToolsVersion = 9.0.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -152,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF8E8E31FB2BCCE0053850D /* Shoppinglist.png in Resources */,
 				DDD467DF1FA2DB1D0053C4F0 /* LaunchScreen.storyboard in Resources */,
 				DDD467DC1FA2DB1D0053C4F0 /* Assets.xcassets in Resources */,
 				DDD467D71FA2DB1D0053C4F0 /* Main.storyboard in Resources */,
@@ -160,6 +205,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10A132CEE1E56DFC808A4EBF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Shopping List-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A73E235AEED615365E91A32 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shopping List/Pods-Shopping List-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C608F5EFE28D47E57D169500 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Shopping List/Pods-Shopping List-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HDAugmentedReality/HDAugmentedReality.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HDAugmentedReality.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Shopping List/Pods-Shopping List-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DDD467CA1FA2DB1D0053C4F0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -167,13 +266,16 @@
 			files = (
 				DDD467E91FA779420053C4F0 /* ItemTableViewController.swift in Sources */,
 				DD29F9D11FAC30B400AD82E4 /* NearMeRequest.swift in Sources */,
+				DD29F9D51FB0C7F700AD82E4 /* NearMeIndexAnnotation.swift in Sources */,
 				DDD467D41FA2DB1D0053C4F0 /* ViewController.swift in Sources */,
 				DDD467D21FA2DB1D0053C4F0 /* AppDelegate.swift in Sources */,
 				DDD467E71FA2DD7C0053C4F0 /* ShopsTableTableViewController.swift in Sources */,
+				DD29F9D71FB0C83900AD82E4 /* NearMeAnnotationView.swift in Sources */,
 				DDD467DA1FA2DB1D0053C4F0 /* Shopping_List.xcdatamodeld in Sources */,
 				DD29F9CD1FAB9C1700AD82E4 /* NearMeMapViewController.swift in Sources */,
 				DDD468191FAA11A80053C4F0 /* AddItemViewController.swift in Sources */,
 				DDD4681B1FAA43770053C4F0 /* MapViewController.swift in Sources */,
+				DD29F9DB1FB0E3A000AD82E4 /* UIColor+Additions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +410,18 @@
 		};
 		DDD467E41FA2DB1D0053C4F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83CF5371ADD18361A0A7B5BF /* Pods-Shopping List.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6LTH9BHPD;
 				INFOPLIST_FILE = "Shopping List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Klas-Solution-LLC.Shopping-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shopping List/ViewControllers/Shopping List-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,14 +429,17 @@
 		};
 		DDD467E51FA2DB1D0053C4F0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C0633F996BBC40639150C53 /* Pods-Shopping List.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U6LTH9BHPD;
 				INFOPLIST_FILE = "Shopping List/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Klas-Solution-LLC.Shopping-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Shopping List/ViewControllers/Shopping List-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
