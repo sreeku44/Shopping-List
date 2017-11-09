@@ -67,7 +67,7 @@ class NearMeMapViewController: ARViewController, ARDataSource, MKMapViewDelegate
         self.presenter.distanceOffsetMultiplier = 0.1   // Pixels per meter
         self.presenter.distanceOffsetMinThreshold = 100// Doesn't raise annotations that are nearer than this
         // Filtering for performance
-        self.presenter.maxDistance = 10000              // Don't show annotations if they are farther than this
+        self.presenter.maxDistance = 20000              // Don't show annotations if they are farther than this
         self.presenter.maxVisibleAnnotations = 50      // Max number of annotations on the screen
         // Stacking
         //self.ARPresenterTransform = ARPresenterStackTransform()

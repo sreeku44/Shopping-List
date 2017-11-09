@@ -22,11 +22,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        
         // add the image to the front of the view
+
         let splashImage = UIImageView(frame: CGRect(x: 0, y: 0, width: 320, height: 480))
         splashImage.image = UIImage(named: "Shoppinglist.png")
         self.window?.addSubview(splashImage)
         self.window?.bringSubview(toFront: splashImage)
+        self.window?.makeKeyAndVisible()
         
         //set an anchor point on the image view so it opens from the left
         splashImage.layer.anchorPoint = CGPoint(x: 0, y: 0.5)

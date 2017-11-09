@@ -13,11 +13,11 @@
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kK2-LQ-mKr">
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shoppinglist.png" translatesAutoresizingMaskIntoConstraints="NO" id="kK2-LQ-mKr">
                                 <rect key="frame" x="106" y="235" width="154" height="195"/>
                             </imageView>
                         </subviews>
@@ -36,4 +36,7 @@
             <point key="canvasLocation" x="61.600000000000001" y="244.22788605697153"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Shoppinglist.png" width="1200" height="1200"/>
+    </resources>
 </document>

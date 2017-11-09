@@ -48,7 +48,7 @@ class ShopsTableTableViewController: UITableViewController {
   //Alert method for easy use
 func showAlert(message: String) {
         let alert = UIAlertController (title: "Shop Name", message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: "Ok", style: .default)
+        let alertAction = UIAlertAction(title: "OK", style: .default)
         
         alert.addAction(alertAction)
         present(alert, animated: true)
@@ -58,7 +58,7 @@ func showAlert(message: String) {
 func save (shopName: String )  {
         if shopName == ""
         {
-            showAlert(message: "Shop Name cnnot be empty")
+            showAlert(message: "Shop Name cannot be empty")
             return
         }
         if ( self.shopNameExists(newShopName: shopName)) {
@@ -132,7 +132,22 @@ override func viewWillAppear(_ animated: Bool) {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        if shopNames.count <= 0 {
+            
+            let alert = UIAlertController (title: "Shops", message: "Add shop to get started", preferredStyle: .alert)
+            
+            let alertAction = UIAlertAction(title: "OK", style: .default)
+            
+            alert.addAction(alertAction)
+            present(alert, animated: true)
+            
+        } else
+        {
+           return shopNames.count
+            
+        }
         return shopNames.count
+        
     }
     
     

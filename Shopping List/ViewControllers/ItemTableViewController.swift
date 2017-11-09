@@ -57,7 +57,21 @@ class ItemTableViewController: UITableViewController, AddItemSaveDelegate, mapVi
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
+        
+//        if self.shopNameSelected.items?.count <= 0 {
+//
+//            let alert = UIAlertController (title: "Item", message: "Add items to shop", preferredStyle: .alert)
+//
+//            let alertAction = UIAlertAction(title: "OK", style: .default)
+//
+//            alert.addAction(alertAction)
+//            present(alert, animated: true)
+//
+//        } else
+//
+//        {
+//        return (self.shopNameSelected.items?.count)!
+//    }
         return (self.shopNameSelected.items?.count)!
     }
 

@@ -55,29 +55,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    
-//    func locationManager(_manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-//        if status == .authorizedWhenInUse {
-//            locationManager.requestLocation()
-//        }
-//    }
-    
-    
-    
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//
-//        if let location = locations.last  {
-//           // let span = MKCoordinateSpanMake(0.5, 0.5)
-//            let region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.3, longitudeDelta: 0.3))
-//            self.mapView.setRegion(region, animated: true)
-//
-//                self.mapView.showsUserLocation = true
-//
-//
-//
-//        }
-//    }
-//
     func nearMeSearch()  {
         let request = MKLocalSearchRequest()
         request.naturalLanguageQuery = nameOfTheShop
@@ -102,12 +79,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                     let region = MKCoordinateRegionMake(mapItem.placemark.coordinate, span)
                     self.mapView.setRegion(region, animated: true)
                     
-                    
-                    //.distance(from: nearMLocation)
-                    //                let distanceInMiles = distanceInMeters / 1609.344
-                    //                let distanceInMilesRounded = String(format: "%.2f", distanceInMiles)
-                    
-                    //print (mapItem.placemark.addressDictionary)
                 }
             }
         }
@@ -211,8 +182,25 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 //            UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
 //        }
 //    }
+    @IBAction func arButton(_ sender: UIBarButtonItem) {
+       
+        let alert = UIAlertController (title: "Welcome to Augmented Reality world", message: "", preferredStyle: .alert)
+        let arMap = UIAlertAction (title: "AR World",
+                                       style: .default) {
+                                        [unowned self] action in
+                                        self.performSegue(withIdentifier: "neARMeSegue", sender: Any?.self )
+        }
+        
+        let cancelAction = UIAlertAction (title: "Cancel",
+                                          style: .default)
+        
+        //alert.addAction(UIAlertAction(title:"OK", style: .Default, handler:  { action in self.performSegueWithIdentifier("mySegueIdentifier", sender: self)
+        alert.addAction(arMap)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //segue.identifier == "neARMeSegue"
+        segue.identifier == "neARMeSegue"
         let navigationC = segue.destination as! UINavigationController
         let neARMeVC = navigationC.viewControllers.first as! NearMeMapViewController
         neARMeVC.nameOfTheShop = nameOfTheShop
