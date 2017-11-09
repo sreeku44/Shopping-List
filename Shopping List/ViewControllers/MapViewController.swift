@@ -151,8 +151,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
          let googleMap = UIAlertAction (title: "Google Map",
          style: .default) {
          [unowned self] action in
+            if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)){
          UIApplication.shared.open(URL(string:
-         "comgooglemaps://?daddr=\(Float(self.selectedAnnotation.coordinate.latitude)),\(Float(self.selectedAnnotation.coordinate.longitude))&directionsmode=driving")!,options: [:], completionHandler: nil)
+         "comgooglemaps://?daddr=\(Float(self.selectedAnnotation.coordinate.latitude)),\(Float(self.selectedAnnotation.coordinate.longitude))&directionsmode=driving&x-success=OpenInGoogleMapsSample%3A%2F%2F&x-source=OpenInGoogleMapsSample")!,options: [:], completionHandler: nil)
+            }
+            else{
+                self.showAlert (message: " Google map is not istalled .Please install Google map")
+                
+                
+            }
 
          }
         let appleMap = UIAlertAction (title: "Apple Map",
@@ -171,7 +178,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         present(alert, animated: true)
 
          }
-    
+   
     
 //        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
 //            UIApplication.shared.open(URL(string:
@@ -184,7 +191,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 //    }
     @IBAction func arButton(_ sender: UIBarButtonItem) {
        
-        let alert = UIAlertController (title: "Welcome to Augmented Reality world", message: "", preferredStyle: .alert)
+        let alert = UIAlertController (title: " Augmented Reality ", message: "Welcome to AR, look around ", preferredStyle: .alert)
         let arMap = UIAlertAction (title: "AR World",
                                        style: .default) {
                                         [unowned self] action in
@@ -193,8 +200,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         let cancelAction = UIAlertAction (title: "Cancel",
                                           style: .default)
-        
-        //alert.addAction(UIAlertAction(title:"OK", style: .Default, handler:  { action in self.performSegueWithIdentifier("mySegueIdentifier", sender: self)
         alert.addAction(arMap)
         alert.addAction(cancelAction)
         present(alert, animated: true)
