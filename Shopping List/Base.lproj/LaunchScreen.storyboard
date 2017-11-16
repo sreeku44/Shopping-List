@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shoppinglist.png" translatesAutoresizingMaskIntoConstraints="NO" id="kK2-LQ-mKr">
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shoppinglist2.png" translatesAutoresizingMaskIntoConstraints="NO" id="kK2-LQ-mKr">
                                 <rect key="frame" x="106" y="235" width="154" height="195"/>
                             </imageView>
                         </subviews>
@@ -37,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Shoppinglist.png" width="1200" height="1200"/>
+        <image name="Shoppinglist2.png" width="1200" height="1200"/>
     </resources>
 </document>

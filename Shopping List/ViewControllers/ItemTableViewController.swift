@@ -27,6 +27,8 @@ class ItemTableViewController: UITableViewController, AddItemSaveDelegate, mapVi
             
         }
     func mapView( mV : Shops){}
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -118,6 +120,8 @@ class ItemTableViewController: UITableViewController, AddItemSaveDelegate, mapVi
             let navigationC = segue.destination as! UINavigationController
             let mapVC = navigationC.viewControllers.first as! MapViewController
             mapVC.nameOfTheShop = shopNameSelected.shopName
+            
+            print (mapVC.nameOfTheShop)
         }
     }
     

@@ -13,6 +13,7 @@
 		DD29F9D51FB0C7F700AD82E4 /* NearMeIndexAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD29F9D41FB0C7F700AD82E4 /* NearMeIndexAnnotation.swift */; };
 		DD29F9D71FB0C83900AD82E4 /* NearMeAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD29F9D61FB0C83900AD82E4 /* NearMeAnnotationView.swift */; };
 		DD29F9DB1FB0E3A000AD82E4 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DD29F9DA1FB0E39F00AD82E4 /* UIColor+Additions.m */; };
+		DDC9C8261FB65D6A007CAD62 /* Shoppinglist2.png in Resources */ = {isa = PBXBuildFile; fileRef = DDC9C8251FB65D6A007CAD62 /* Shoppinglist2.png */; };
 		DDD467D21FA2DB1D0053C4F0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD467D11FA2DB1D0053C4F0 /* AppDelegate.swift */; };
 		DDD467D41FA2DB1D0053C4F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD467D31FA2DB1D0053C4F0 /* ViewController.swift */; };
 		DDD467D71FA2DB1D0053C4F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDD467D51FA2DB1D0053C4F0 /* Main.storyboard */; };
@@ -23,7 +24,6 @@
 		DDD467E91FA779420053C4F0 /* ItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD467E81FA779420053C4F0 /* ItemTableViewController.swift */; };
 		DDD468191FAA11A80053C4F0 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD468181FAA11A80053C4F0 /* AddItemViewController.swift */; };
 		DDD4681B1FAA43770053C4F0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD4681A1FAA43770053C4F0 /* MapViewController.swift */; };
-		DDF8E8E31FB2BCCE0053850D /* Shoppinglist.png in Resources */ = {isa = PBXBuildFile; fileRef = DDF8E8E21FB2BCCE0053850D /* Shoppinglist.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +37,7 @@
 		DD29F9D81FB0E39300AD82E4 /* UIColor+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Additions.h"; sourceTree = "<group>"; };
 		DD29F9D91FB0E39E00AD82E4 /* Shopping List-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Shopping List-Bridging-Header.h"; sourceTree = "<group>"; };
 		DD29F9DA1FB0E39F00AD82E4 /* UIColor+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
+		DDC9C8251FB65D6A007CAD62 /* Shoppinglist2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shoppinglist2.png; sourceTree = "<group>"; };
 		DDD467CE1FA2DB1D0053C4F0 /* Shopping List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopping List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDD467D11FA2DB1D0053C4F0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDD467D31FA2DB1D0053C4F0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +50,6 @@
 		DDD467E81FA779420053C4F0 /* ItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewController.swift; sourceTree = "<group>"; };
 		DDD468181FAA11A80053C4F0 /* AddItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemViewController.swift; sourceTree = "<group>"; };
 		DDD4681A1FAA43770053C4F0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		DDF8E8E21FB2BCCE0053850D /* Shoppinglist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shoppinglist.png; path = ../../../../Downloads/Shoppinglist.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 		DDD468171FA901B20053C4F0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				DDF8E8E21FB2BCCE0053850D /* Shoppinglist.png */,
+				DDC9C8251FB65D6A007CAD62 /* Shoppinglist2.png */,
 				DDD467D31FA2DB1D0053C4F0 /* ViewController.swift */,
 				DDD467E81FA779420053C4F0 /* ItemTableViewController.swift */,
 				DDD467E61FA2DD7C0053C4F0 /* ShopsTableTableViewController.swift */,
@@ -169,7 +169,7 @@
 					DDD467CD1FA2DB1D0053C4F0 = {
 						CreatedOnToolsVersion = 9.0.1;
 						LastSwiftMigration = 0910;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -196,7 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDF8E8E31FB2BCCE0053850D /* Shoppinglist.png in Resources */,
+				DDC9C8261FB65D6A007CAD62 /* Shoppinglist2.png in Resources */,
 				DDD467DF1FA2DB1D0053C4F0 /* LaunchScreen.storyboard in Resources */,
 				DDD467DC1FA2DB1D0053C4F0 /* Assets.xcassets in Resources */,
 				DDD467D71FA2DB1D0053C4F0 /* Main.storyboard in Resources */,
@@ -330,7 +330,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Klas Solutions LLC (U6LTH9BHPD)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -349,12 +349,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos11.1;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -387,7 +389,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Klas Solutions LLC (U6LTH9BHPD)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -400,10 +402,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos11.1;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -414,16 +418,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Klas Solutions LLC (U6LTH9BHPD)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = U6LTH9BHPD;
 				INFOPLIST_FILE = "Shopping List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Klas-Solution-LLC.Shopping-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6de91beb-b3e3-498a-ace1-cb17742851f8";
+				PROVISIONING_PROFILE_SPECIFIER = "Just 4 Shopping App Store Distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Shopping List/ViewControllers/Shopping List-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -433,15 +441,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Klas Solutions LLC (U6LTH9BHPD)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = U6LTH9BHPD;
 				INFOPLIST_FILE = "Shopping List/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Klas-Solution-LLC.Shopping-List";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6de91beb-b3e3-498a-ace1-cb17742851f8";
+				PROVISIONING_PROFILE_SPECIFIER = "Just 4 Shopping App Store Distribution";
 				SWIFT_OBJC_BRIDGING_HEADER = "Shopping List/ViewControllers/Shopping List-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
